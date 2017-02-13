@@ -1,0 +1,131 @@
+.menu-outer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #333;
+  transition: width 1s ease;
+}
+.btn-menu {
+  position: fixed;
+  top: .3rem;
+  right: .5rem;
+}
+.btn-menu-fixed {
+  position: fixed;
+  top: 0;
+  right: 1rem;
+}
+.menu-fade-in {
+  width: 2.5rem;
+}
+.menu-fade-out {
+  width: 0;
+}
+.article {
+  border-bottom: .01rem solid #EBF2F6;
+  padding: .4rem 0 .5rem;
+}
+.article ul > li {
+  float: left;
+}
+.article li + li::before {
+  content: ', ';
+  margin-right: .05rem;
+  display: inline-block;
+}
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.article-tag-list {
+  display: inline-block;
+}
+.article-header {
+  font-size: .24rem;
+}
+.article-header a {
+  color: #4A4A4A;
+  transition: color .3s ease;
+}
+.article-header a:hover {
+  color: #111;
+}
+.article-header h2 {
+  padding: 0;
+  margin: 0;
+}
+.article-entry {
+  color: #3A4145;
+  padding: .01rem;
+}
+.article-entry p:not(:first-child) {
+  margin-top: .1rem;
+}
+.article-footer {
+  color: #9eabb3;
+  font-size: .16rem;
+}
+.article-footer .read-more {
+  display: inline-block;
+  float: right;
+  padding: .05rem .1rem;
+  -webkit-border-radius: .2rem;
+  -moz-border-radius: .02rem;
+  border-radius: .2rem;
+  border: .01rem solid #999;
+}
+.article-footer .read-more a:hover {
+  text-decoration: none;
+}
+.article-footer a {
+  color: inherit;
+  transition: text-decoration 1s ease;
+}
+.article-footer a:hover {
+  text-decoration: underline;
+}
+.article-footer * {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 100%;
+}
+p > img {
+  position: relative;
+  left: 50%;
+  padding: .05rem;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.pagination {
+  display: block;
+  margin: .3rem auto;
+  text-align: center;
+}
+.bottom-outer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: .1rem;
+  color: #BBC7CC;
+  font-size: .14rem;
+}
+.bottom-outer a {
+  color: inherit;
+}
+.bottom-outer div {
+  display: inline-block;
+}
+.bottom-outer .copyright {
+  float: left;
+}
+.bottom-outer .bottom-inner {
+  float: right;
+}
+.bottom-outer .author {
+  font-weight: bolder;
+}

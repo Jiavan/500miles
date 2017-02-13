@@ -1,0 +1,24 @@
+{
+  "name": "500miles",
+  "version": "0.0.1",
+  "description": "A Hexo theme",
+  "main": "null",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hexo",
+    "hexo",
+    "theme"
+  ],
+  "author": "Jiavan, jiavan.com@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "highlightjs": "^9.8.0",
+    "normalize.css": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0"
+  }
+}

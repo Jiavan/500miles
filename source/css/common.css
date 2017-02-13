@@ -1,0 +1,19 @@
+html {
+  font: 100px/1.75 "Helvetica Neue", "Helvetica", "Lucida Grande", "Arial", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", "sans-serif";
+}
+body {
+  position: relative;
+  font-size: .18rem;
+}
+a {
+  text-decoration: none;
+  color: #4078c0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 7.5rem;
+  margin: auto;
+}
