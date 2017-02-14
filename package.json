@@ -15,7 +15,8 @@
   "license": "MIT",
   "dependencies": {
     "highlightjs": "^9.8.0",
-    "normalize.css": "^5.0.0"
+    "normalize.css": "^5.0.0",
+    "zepto": "^1.2.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

@@ -21,3 +21,12 @@ p {
     width: 7.5rem;
     margin: auto;
 }
+
+.clearfix {
+    position: relative;
+}
+.clearfix::after {
+    display: table;
+    content: '';
+    clear: both;
+}

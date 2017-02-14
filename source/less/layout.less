@@ -1,31 +1,19 @@
 .menu-outer {
-    position: fixed;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 0;
-    background-color: #333;
-    transition: width 1s ease;
-}
-
-.btn-menu {
-    position: fixed;
-    top: .3rem;
-    right: .5rem;
-}
-
-.btn-menu-fixed {
-    position: fixed;
-    top: 0;
-    right: 1rem;
-}
-
-.menu-fade-in {
-    width: 2.5rem;
-}
-
-.menu-fade-out {
-    width: 0;
+    font-weight: 400;
+    color: #4A4A4A;
+    a {
+        color: inherit;
+        transition: color .5s ease;
+    }
+    a + a {
+        margin-left: .16rem;
+    }
+    a:hover {
+        color: #111;
+    }
+    .menu-inner {
+        float: right;
+    }
 }
 
 .article {
@@ -88,8 +76,18 @@ ul, li {
         -moz-border-radius: .02rem;
         border-radius: .2rem;
         border: .01rem solid #999;
+        background: transparent;
+        transition: background .3s ease;
+        font-weight: 300;
+        font-size: .14rem;
         a:hover {
             text-decoration: none;
+        }
+        &:hover {
+            background: #4078c0;
+            color: #fff;
+            border: .01rem solid #fff;
+            cursor: pointer;
         }
     }
     a {
@@ -101,7 +99,7 @@ ul, li {
     }
     * {
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: bottom;
         line-height: 100%;
     }
 }
@@ -117,8 +115,10 @@ p > img {
 
 .pagination {
     display: block;
-    margin: .3rem auto;
+    margin: .7rem auto 1rem;
     text-align: center;
+    color: #9EABB3;
+    font-size: .14rem;
 }
 
 .bottom-outer {
@@ -139,8 +139,20 @@ p > img {
     }
     .bottom-inner {
         float: right;
+        a {
+            font-weight: bold;
+        }
     }
     .author {
         font-weight: bolder;
     }
+}
+
+// Post
+.post {
+    margin-top: 1rem;
+}
+
+time {
+    color: #9EABB3;
 }

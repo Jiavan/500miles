@@ -1,27 +1,19 @@
 .menu-outer {
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 0;
-  background-color: #333;
-  transition: width 1s ease;
+  font-weight: 400;
+  color: #4A4A4A;
 }
-.btn-menu {
-  position: fixed;
-  top: .3rem;
-  right: .5rem;
+.menu-outer a {
+  color: inherit;
+  transition: color .5s ease;
 }
-.btn-menu-fixed {
-  position: fixed;
-  top: 0;
-  right: 1rem;
+.menu-outer a + a {
+  margin-left: .16rem;
 }
-.menu-fade-in {
-  width: 2.5rem;
+.menu-outer a:hover {
+  color: #111;
 }
-.menu-fade-out {
-  width: 0;
+.menu-outer .menu-inner {
+  float: right;
 }
 .article {
   border-bottom: .01rem solid #EBF2F6;
@@ -77,9 +69,19 @@ li {
   -moz-border-radius: .02rem;
   border-radius: .2rem;
   border: .01rem solid #999;
+  background: transparent;
+  transition: background .3s ease;
+  font-weight: 300;
+  font-size: .14rem;
 }
 .article-footer .read-more a:hover {
   text-decoration: none;
+}
+.article-footer .read-more:hover {
+  background: #4078c0;
+  color: #fff;
+  border: .01rem solid #fff;
+  cursor: pointer;
 }
 .article-footer a {
   color: inherit;
@@ -90,7 +92,7 @@ li {
 }
 .article-footer * {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
   line-height: 100%;
 }
 p > img {
@@ -103,8 +105,10 @@ p > img {
 }
 .pagination {
   display: block;
-  margin: .3rem auto;
+  margin: .7rem auto 1rem;
   text-align: center;
+  color: #9EABB3;
+  font-size: .14rem;
 }
 .bottom-outer {
   position: absolute;
@@ -126,6 +130,15 @@ p > img {
 .bottom-outer .bottom-inner {
   float: right;
 }
+.bottom-outer .bottom-inner a {
+  font-weight: bold;
+}
 .bottom-outer .author {
   font-weight: bolder;
+}
+.post {
+  margin-top: 1rem;
+}
+time {
+  color: #9EABB3;
 }

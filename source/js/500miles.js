@@ -1,16 +1,18 @@
-;
-(function () {
-    var btnMenu = document.querySelector('.btn-menu');
-    var menu = document.querySelector('.menu-outer');
-    btnMenu.addEventListener('click', function (e) {
-        // btnMenu.classList.add('btn-menu-fixed');
-        if (btnMenu.classList.contains('btn-menu-fixed')) {
-            btnMenu.classList.remove('btn-menu-fixed');
-            menu.classList.add('menu-fade-out');
-        } else {
-            btnMenu.classList.add('btn-menu-fixed');
-            menu.classList.add('menu-fade-in');
-        }
-        menu.classList.add('menu-fade-in');
-    }, false);
-})();
+// ;(function () {
+//     var $btnMenu = $('.btn-menu');
+//     var $menu = $('.menu-outer');
+//     var $document = $(document);
+//
+//     $document.on('click', '.btn-menu', function () {
+//
+//         if ($btnMenu.hasClass('btn-menu-closed')) {
+//             $btnMenu.removeClass('btn-menu-closed');
+//             $menu.removeClass('menu-fade-out').addClass('menu-fade-in');
+//         } else {
+//             $btnMenu.addClass('btn-menu-closed');
+//             $menu.removeClass('menu-fade-in').addClass('menu-fade-out');
+//         }
+//
+//     });
+//
+// })();
