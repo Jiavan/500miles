@@ -1,62 +1,18 @@
-<%
-var pageTitle = page.title || config.subtitle || '';
-if (is_archive()) pageTitle = 'Archives';
-if (is_tag()) pageTitle = 'Tag: ' + page.tag;
-if (is_category()) pageTitle = 'Category: ' + page.category;
-if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
-if (is_year()) pageTitle += ': ' + page.year;
-pageTitle += ' [ ' + config.title + ' ]';
-%>
-
-<!DOCTYPE html>
-<html lang="<%= config.language %>">
-<head>
-    <meta charset="UTF-8">
-    <title><%= pageTitle %></title>
-    <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
-    <!-- stylesheets list from config.yml -->
-    <% theme.stylesheets.forEach(function(url) { %>
-    <link rel="stylesheet" href="<%= url %>">
-    <% }); %>
-    <% } %>
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/highlight-github.css">
-</head>
+<%- partial('_partial/head') %>
 <body>
-
-<div class="container">
-    <div class="menu-outer clearfix">
-        <div class="menu-inner">
-            <% Object.keys(theme.menu).forEach(function(key) { %>
-            <a href="<%= theme.menu[key] %>"><%= key %></a>
-            <% }); %>
-        </div>
+  <div id="container" class="container">
+    <div id="wrap">
+      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+      <div class="outer">
+        <section id="main"><%- body %></section>
+        <!--<% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>-->
+          <!--<%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>-->
+        <!--<% } %>-->
+      </div>
+      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
     </div>
-
-    <div id="content-outer">
-        <div id="content-inner">
-            <%- body %>
-        </div>
-    </div>
-
-    <div class="bottom-outer">
-        <div class="copyright"><span class="author"><%= config.author %></span> &copy; 2013-<%- new Date().getFullYear()%></div>
-        <div class="bottom-inner">
-            <span>Powered by hexo theme with <a href="https://github.com/Jiavan/500miles">500miles</a></span>
-        </div>
-    </div>
-</div>
-
-<script src="/js/zepto.min.js"></script>
-<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
-<!-- scripts list from theme config.yml -->
-<% theme.scripts.forEach(function(url) { %>
-<script src="<%= url %>"></script>
-<% }); %>
-<% } %>
-<script src="/js/highlight.pack.min.js"></script>
-<script>
-    hljs.initHighlightingOnLoad();
-</script>
+    <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/after-footer') %>
+  </div>
 </body>
 </html>

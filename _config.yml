@@ -1,21 +1,37 @@
-
-# html lang
-language: zh-cmn
-
-# main menu navigation
+# Header
 menu:
   Home: /
   Archives: /archives
-  Category: /category
   About: /about
+rss: /atom.xml
 
-# Miscelaneous
-favicon: /favicon.ico
+# Content
+excerpt_link: Read More
+fancybox: false
 
-# stylesheets loaded in the <head>
-stylesheets:
-- /css/500miles.css
+# Sidebar
+sidebar: right
+widgets:
+- category
+- tag
+- tagcloud
+- archive
+- recent_posts
 
-# scripts loaded in the end of the body
-scripts:
-- /js/500miles.js
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+# - archive
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.png
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:

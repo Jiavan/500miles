@@ -1,4 +1,4 @@
-.menu-outer {
+.outer {
     font-weight: 400;
     color: #4A4A4A;
     a {
@@ -11,9 +11,11 @@
     a:hover {
         color: #111;
     }
-    .menu-inner {
+    .main-nav {
         float: right;
+
     }
+
 }
 
 .article {
@@ -29,6 +31,9 @@
         content: ', ';
         margin-right: .05rem;
         display: inline-block;
+    }
+    h1 {
+        margin: 0;
     }
 }
 
@@ -60,14 +65,10 @@ ul, li {
 .article-entry {
     color: #3A4145;
     padding: .01rem;
+    margin-top: .1rem;
     p:not(:first-child) {
         margin-top: .1rem;
     }
-}
-
-.article-footer {
-    color: #9eabb3;
-    font-size: .16rem;
     .read-more {
         display: inline-block;
         float: right;
@@ -82,6 +83,7 @@ ul, li {
         font-size: .14rem;
         a:hover {
             text-decoration: none;
+            color: #fff;
         }
         &:hover {
             background: #4078c0;
@@ -90,6 +92,17 @@ ul, li {
             cursor: pointer;
         }
     }
+
+    p > a + span.caption {
+        display: block;
+        text-align: center;
+    }
+}
+
+.article-footer {
+    color: #9eabb3;
+    font-size: .16rem;
+    margin: .1rem 0 .2rem;
     a {
         color: inherit;
         transition: text-decoration 1s ease;
@@ -104,13 +117,23 @@ ul, li {
     }
 }
 
-p > img {
+.article-nav {
+    display: flex;
+    color: #9eabb3;
+    font-size: .14rem;
+    & > a {
+        flex: 1;
+    }
+}
+
+p img {
     position: relative;
     left: 50%;
     padding: .05rem;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
+    max-width: 100% !important;
 }
 
 .pagination {
@@ -121,7 +144,7 @@ p > img {
     font-size: .14rem;
 }
 
-.bottom-outer {
+.footer .outer {
     position: absolute;
     left: 0;
     right: 0;
@@ -136,16 +159,41 @@ p > img {
     }
     .copyright {
         float: left;
+        white-space: nowrap;
     }
-    .bottom-inner {
+    .author-info {
         float: right;
         a {
             font-weight: bold;
         }
     }
-    .author {
+    .bolder {
         font-weight: bolder;
     }
+}
+
+// page nav
+.page-nav {
+    margin: .6rem 0 1rem;
+    font-size: .14rem;
+    color: #9EABB3;
+    text-align: center;
+    .page-number {
+        color: #0086b3;
+    }
+    a, span {
+        margin-left: .16rem;
+    }
+    & *:first-child {
+        margin-left: 0;
+    }
+    .current {
+        color: inherit;
+    }
+}
+
+#mobile-nav {
+    display: none;
 }
 
 // Post

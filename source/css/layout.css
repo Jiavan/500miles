@@ -1,18 +1,18 @@
-.menu-outer {
+.outer {
   font-weight: 400;
   color: #4A4A4A;
 }
-.menu-outer a {
+.outer a {
   color: inherit;
   transition: color .5s ease;
 }
-.menu-outer a + a {
+.outer a + a {
   margin-left: .16rem;
 }
-.menu-outer a:hover {
+.outer a:hover {
   color: #111;
 }
-.menu-outer .menu-inner {
+.outer .main-nav {
   float: right;
 }
 .article {
@@ -26,6 +26,9 @@
   content: ', ';
   margin-right: .05rem;
   display: inline-block;
+}
+.article h1 {
+  margin: 0;
 }
 ul,
 li {
@@ -53,15 +56,12 @@ li {
 .article-entry {
   color: #3A4145;
   padding: .01rem;
+  margin-top: .1rem;
 }
 .article-entry p:not(:first-child) {
   margin-top: .1rem;
 }
-.article-footer {
-  color: #9eabb3;
-  font-size: .16rem;
-}
-.article-footer .read-more {
+.article-entry .read-more {
   display: inline-block;
   float: right;
   padding: .05rem .1rem;
@@ -74,14 +74,24 @@ li {
   font-weight: 300;
   font-size: .14rem;
 }
-.article-footer .read-more a:hover {
+.article-entry .read-more a:hover {
   text-decoration: none;
+  color: #fff;
 }
-.article-footer .read-more:hover {
+.article-entry .read-more:hover {
   background: #4078c0;
   color: #fff;
   border: .01rem solid #fff;
   cursor: pointer;
+}
+.article-entry p > a + span.caption {
+  display: block;
+  text-align: center;
+}
+.article-footer {
+  color: #9eabb3;
+  font-size: .16rem;
+  margin: .1rem 0 .2rem;
 }
 .article-footer a {
   color: inherit;
@@ -95,13 +105,22 @@ li {
   vertical-align: bottom;
   line-height: 100%;
 }
-p > img {
+.article-nav {
+  display: flex;
+  color: #9eabb3;
+  font-size: .14rem;
+}
+.article-nav > a {
+  flex: 1;
+}
+p img {
   position: relative;
   left: 50%;
   padding: .05rem;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   transform: translateX(-50%);
+  max-width: 100% !important;
 }
 .pagination {
   display: block;
@@ -110,7 +129,7 @@ p > img {
   color: #9EABB3;
   font-size: .14rem;
 }
-.bottom-outer {
+.footer .outer {
   position: absolute;
   left: 0;
   right: 0;
@@ -118,23 +137,46 @@ p > img {
   color: #BBC7CC;
   font-size: .14rem;
 }
-.bottom-outer a {
+.footer .outer a {
   color: inherit;
 }
-.bottom-outer div {
+.footer .outer div {
   display: inline-block;
 }
-.bottom-outer .copyright {
+.footer .outer .copyright {
   float: left;
+  white-space: nowrap;
 }
-.bottom-outer .bottom-inner {
+.footer .outer .author-info {
   float: right;
 }
-.bottom-outer .bottom-inner a {
+.footer .outer .author-info a {
   font-weight: bold;
 }
-.bottom-outer .author {
+.footer .outer .bolder {
   font-weight: bolder;
+}
+.page-nav {
+  margin: .6rem 0 1rem;
+  font-size: .14rem;
+  color: #9EABB3;
+  text-align: center;
+}
+.page-nav .page-number {
+  color: #0086b3;
+}
+.page-nav a,
+.page-nav span {
+  margin-left: .16rem;
+}
+.page-nav *:first-child {
+  margin-left: 0;
+}
+.page-nav .current {
+  color: inherit;
+}
+#mobile-nav {
+  display: none;
 }
 .post {
   margin-top: 1rem;
