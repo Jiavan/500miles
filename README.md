@@ -1,2 +1,2 @@
-# 500miles
-A beautiful and simple hexo theme, five hundred miles such as a white paper
+# Ugly Rect
+An simple `hexo` theme with some ugly rectangle like `MDN`.
