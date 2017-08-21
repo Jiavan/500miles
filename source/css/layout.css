@@ -85,7 +85,6 @@ li {
 }
 
 .article-entry .read-more {
-  display: inline-block;
   float: right;
   padding: .05rem .1rem;
   border: .01rem solid #999;
