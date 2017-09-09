@@ -1,0 +1,81 @@
+html {
+    font-size: 100px;
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+    html {
+        font-size: 44px;
+    }
+}
+
+body {
+    position: relative;
+    font: .16rem/1.7 "Helvetica Neue", "Helvetica", "Lucida Grande", "Arial", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", "sans-serif";
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #039be5;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+code {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: rgba(27,31,35,0.05);
+    padding: .02rem;
+    font-size: 90%;
+    color: #3f3f3f;
+    border-radius: .04rem;
+}
+
+.article-inner a {
+    color: #039be5;
+}
+
+.article-inner blockquote {
+    position: relative;
+    margin: .16rem 0;
+    padding: .16rem .16rem .16rem .32rem;
+    background: rgba(128,128,128,0.05);
+    color: #7b7b7b;
+}
+
+.article-inner blockquote:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: .06rem;
+    height: 100%;
+    background: darkgrey;
+}
+
+.container {
+    width: 7.12rem;
+    margin: auto;
+}
+
+.clearfix {
+    position: relative;
+}
+
+.clearfix::after {
+    display: table;
+    content: '';
+    clear: both;
+}
