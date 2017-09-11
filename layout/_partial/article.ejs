@@ -38,28 +38,23 @@
         </footer>
     </div>
     <% if (!index){ %>
-    <%- partial('post/nav') %>
-    <% } %>
-
-    <% if (!index && post.comments && config.duoshuo_shortname){ %>
-    <section id="comments">
-        <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div>
-        <!-- 多说评论框 end -->
-        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-        <script type="text/javascript">
-            var duoshuoQuery = {short_name:'<%= config.duoshuo_shortname %>'};
+        <%- partial('post/nav') %>
+        <% if (config.disqus_shortname){ %>
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_shortname = '<%= config.disqus_shortname %>';
+            var disqus_config = function () {
+                this.page.url = location.href;
+                this.page.identifier = location.pathname;
+            };
             (function() {
-                var ds = document.createElement('script');
-                ds.type = 'text/javascript';ds.async = true;
-                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                ds.charset = 'UTF-8';
-                (document.getElementsByTagName('head')[0]
-                || document.getElementsByTagName('body')[0]).appendChild(ds);
+                var d = document, s = d.createElement('script');
+                s.src = 'https://disqus_shortname.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
             })();
         </script>
-        <!-- 多说公共JS代码 end -->
-    </section>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <% } %>
     <% } %>
-
 </article>
