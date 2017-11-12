@@ -1,3 +1,10 @@
+.article-entry ul,
+.article-entry ol,
+.article-entry li {
+    list-style: inherit;
+    margin-left: 1em;
+    padding-left: 0;
+}
 .outer {
     font-weight: 400;
     color: #4A4A4A;
@@ -25,17 +32,6 @@
     padding: .4rem 0 .5rem;
 }
 
-.article ul > li.article-tag-list-item {
-    float: left;
-    padding: .02rem .08rem;
-    border: .01rem solid;
-    vertical-align: middle;
-}
-
-.article li + li.article-tag-list-item {
-    margin-left: .05rem;
-}
-
 .article h1 {
     margin: 0;
 }
@@ -47,24 +43,21 @@ li {
     margin: 0;
 }
 
-.article-tag-list {
-    display: inline-block;
-    margin-left: .12rem;
-}
-
 .article-header {
     font-size: .24rem;
     margin-bottom: .16rem;
 }
 
 .article-header .article-title {
-    padding: .06rem;
+    padding: .06rem .12rem;
     color: #fff;
     background: #333;
+    transition: .3s ease-in-out;
 }
 
 .article-header .article-title:hover {
-    color: #999;
+    background: #039be5;
+    color: #fff;
 }
 
 .article-header a {
@@ -84,19 +77,6 @@ li {
     margin-top: .1rem;
 }
 
-.article-entry .read-more {
-    float: right;
-    padding: .05rem .1rem;
-    border: .01rem solid #999;
-    transition: background .3s ease;
-    font-weight: 300;
-    font-size: .14rem;
-}
-
-.article-entry .read-more a {
-    color: #333;
-}
-
 .article-entry .read-more:hover a {
     text-decoration: none;
     color: #fff;
@@ -111,31 +91,6 @@ li {
 .article-entry p > a + span.caption {
     display: block;
     text-align: center;
-}
-
-.article-footer {
-    color: #9eabb3;
-    font-size: .16rem;
-    margin: .1rem 0 .2rem;
-}
-
-.article-tag-list-item:hover {
-    background: #333;
-}
-
-.article-tag-list-item:hover a {
-    color: #fff;
-}
-
-.article-footer a {
-    color: #333;
-    transition: text-decoration 1s ease;
-}
-
-.article-footer * {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 100%;
 }
 
 .article-nav {
@@ -164,6 +119,10 @@ p img {
     text-align: center;
     color: #9EABB3;
     font-size: .14rem;
+}
+
+.footer {
+    overflow: hidden;
 }
 
 .footer .outer {
@@ -250,4 +209,39 @@ time {
     padding: .16rem 0;
     border-bottom: .04rem solid #039be5;
     font-weight: bold;
+}
+
+/* ugly */
+.article-more-link.read-more {
+    float: right;
+    padding: 0 .06rem;
+    transition: .3s ease-in-out;
+}
+
+.article-more-link.read-more:hover {
+    background: #039be5;
+    color: #fff;
+}
+
+.article-footer {
+    overflow: hidden;
+}
+
+.article-footer > a > time {
+    float: left;
+}
+
+.article-tag-list {
+    overflow: hidden;
+    float: left;
+    margin-left: .1rem;
+}
+
+.article-tag-list > li {
+    float: left;
+    text-decoration: underline;
+}
+
+.article-tag-list > li + li {
+    margin-left: .05rem;
 }
